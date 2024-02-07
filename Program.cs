@@ -308,7 +308,7 @@ namespace Mugshots_US_States_
 
                             if (rc == 1000)
                             {
-                                if ((new FileInfo(dbPath + dbName).Length / 1000000) > 5000000)
+                                if ((new FileInfo(dbPath + dbName).Length / 1000) > 5000000)
                                 {//1 GB = 1073741824 Bytes
                                     conn.Close(); conn.Dispose();
                                     dbName = "Mugshots_" + DateTime.Now.ToString().Replace("/", "").Replace(":", "") + ".db";
